@@ -1,0 +1,23 @@
+{
+  "name": "nighglow-chat-platform",
+  "version": "5.0.0",
+  "private": true,
+  "description": "NighGlow private chat platform - Node.js, Express and SQL.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2",
+    "sql.js": "^1.13.0"
+  }
+}

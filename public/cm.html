@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NighGlow — Rooms</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="app">
+<header class="nav"><a class="wordmark" href="/cm"><span class="logo-mark mini"><i></i><i></i><i></i></span>NighGlow</a>
+<div class="nav-right"><div class="presence"><span></span><b id="who"></b></div><button id="logout" class="ghost">Log out</button></div></header>
+<main class="workspace">
+<aside class="rail">
+  <div class="rail-head"><div><small>WORKSPACE</small><h2>Your rooms</h2></div><div class="rail-actions"><button id="railJoin" class="ghost slim">Join</button><button id="newRoom" class="icon-btn" title="Create room">+</button></div></div>
+  <div id="rooms" class="room-list"></div>
+  <div class="rail-foot"><div class="tiny">Rooms expire automatically</div><div class="tiny">when their retention ends.</div></div>
+</aside>
+<section class="main">
+  <div id="emptyState" class="empty">
+    <div class="empty-icon">✦</div><h1>Pick a room.</h1><p>Create a private room or unlock one with its name and password.</p>
+    <div class="empty-actions"><button id="emptyCreate" class="primary">Create room</button><button id="emptyJoin" class="ghost">Join room</button></div>
+  </div>
+  <div id="chatView" class="chat-view hidden">
+    <header class="chat-header"><div class="chat-title"><div class="crumb">PRIVATE ROOM</div><h1 id="roomTitle"></h1><div id="roomMeta" class="tiny"></div></div><div class="chat-actions"><button id="roomInfo" class="ghost">Members</button><button id="closeRoom" class="ghost" aria-label="Back to rooms">×</button></div></header>
+    <div id="messages" class="messages"></div>
+    <div class="composer-wrap">
+      <div id="aiStatus" class="ai-status hidden"></div>
+      <div id="mentionBox" class="mention-box hidden"></div>
+      <form id="messageForm" class="composer">
+        <textarea id="message" rows="1" maxlength="12000" placeholder="Message the room…  ·  @gemini  @groq  @openr  ·  #name to mention"></textarea>
+        <div class="composer-bar"><label class="attach"><input id="file" type="file"><span>＋ Attach</span></label><span class="hint">Enter to send · Shift+Enter for a new line</span><button class="send" aria-label="Send">↑</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<div id="modal" class="modal hidden"><div class="modal-bg"></div><div class="modal-card" id="modalCard"></div></div>
+<script src="/app.js"></script></body></html>

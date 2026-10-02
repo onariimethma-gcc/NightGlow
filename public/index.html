@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NighGlow — Private chat</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="landing">
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<main class="landing-grid">
+  <section class="hero">
+    <div class="logo-mark"><span></span><span></span><span></span></div>
+    <div class="eyebrow">PRIVATE CHAT · TIMED ROOMS</div>
+    <h1>Quiet rooms for<br><em>real conversations.</em></h1>
+    <p>NighGlow is a private, password-protected chat space built for small groups.</p>
+    <div class="feature-row"><div><b>01</b><span>Password rooms</span></div><div><b>02</b><span>File sharing</span></div><div><b>03</b><span>AI commands</span></div></div>
+  </section>
+  <section class="auth-card">
+    <div class="card-top"><div class="brand-caps"><span class="status-dot"></span> NighGlow</div><span>12+ only</span></div>
+    <div id="authPane">
+      <h2>Enter NighGlow</h2><p class="sub">Use a username and your date of birth to continue.</p>
+      <form id="signinForm">
+        <label>Username<input id="username" placeholder="e.g. alex" autocomplete="username" maxlength="32" required></label>
+        <label>Date of birth<input id="dob" type="date" required></label>
+        <button class="primary wide">Continue <span>→</span></button>
+      </form>
+      <div class="divider"><span>OR</span></div>
+      <h3>Have a room?</h3>
+      <p class="sub">Continue above, then use the room name and password.</p>
+      <div id="notice" class="notice"></div>
+    </div>
+  </section>
+</main>
+<footer>NighGlow · private rooms expire automatically (2 to 5 days)</footer>
+<script src="/app.js"></script></body></html>
